@@ -1,95 +1,41 @@
 @import '../app.scss';
 
+.book-btn{
+    display:none !important;
+    @include mq('tablet'){
+        display: inline-block !important;
+    }
+    @include mq('desktop'){
+        margin-left: 50%;
+    }
+}
 .nav-bar{
     display:none;
     @include mq ('tablet') {
-        display: initial;
-        width: 100%;
-        height: 90px;
-        .top-nav-bar{
-            border-bottom: 1px solid lightgray;
-            font-size: 14px;
-            background: rgba(37, 61, 128, 0.1);
-            width: 97%;
-            display:flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 30px;
-            padding: 0px 2%;
-            div{
-                display: flex;
-                align-items: center;
-            }
-            ul.social-links{
-                list-style:none;
-                padding:0px;
-                padding-left: 8px; 
-                margin:0px;
-                display: flex;
-                justify-content: center;
-                li{
-                    padding-top: 3px;
-                    padding-left: 8px;
-                    a{
-                        svg{
-                            height: 17px;
-                            width: auto;
-    
-                        }
-                    }
-                }
-            }
-            .phone-num{
-                
-                svg{
-                    height: 17px;
-                    width: auto;
-                    padding-right: 10px
-                }
-            }
-        }
-        nav.bottom-nav-bar{
-            height: 60px;
-            width: 100%;
-            display: flex;
-            font-size: 14px;
+        height: 60px;
+        width: fit-content;
+        display: flex;
+        font-size: 14px;
+        color: $primary-color;
+        font-family: $heading-font;
+        a{
             color: $primary-color;
             font-family: $heading-font;
-            a{
-                color: $primary-color;
-                font-family: $heading-font;
-                text-decoration: none;
-            }
-            ul{
-                width: fit-content;
-                height: 100%;
-                list-style: none;
-                display: flex;
-                margin:0px;
-                padding:0px;
-    
-                li{
-                    border-right: 1px solid lightgray;
-                    width: 83px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-            }
-            svg{
-                width: 20px;
-                height: auto;
-                padding-right: 10px;
-            }
-            .stan-sa-clenom{
-                height: 100%;
+            text-decoration: none;
+        }
+        ul{
+            width: fit-content;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            margin:0px;
+            padding:0px;
+
+            li{
+                padding: 0px 15px;
                 display: flex;
                 align-items: center;
-                padding-left: 10px;
-                span{
-                    display: inline-block;
-                    border-bottom: 1px solid $accent-color; 
-                }
+                justify-content: center;
             }
         }
     } 

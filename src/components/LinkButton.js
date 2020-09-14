@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const LinkButton = (props) => {
   const {
-    background, color, href, children,
+    background, color, href, children, className
   } = props;
 
   const style = {
@@ -15,7 +15,7 @@ const LinkButton = (props) => {
     <Link href={href}>
       <span
         style={style}
-        className="link-btn"
+        className={`link-btn ${className}`}
       >
         {children}
       </span>

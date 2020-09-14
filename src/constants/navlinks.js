@@ -4,28 +4,28 @@ import { Link } from 'gatsby'
 const links = [
     { 
         id: 1,
-        text: 'Domov',
-        href: '/',
+        text: 'O nás',
+        href: '/#o-nas',
     },
     {
         id: 2,
-        text: 'O nás',
-        href: '/o-nas',
+        text: 'Služby',
+        href: '/služby',
     },
     {
         id: 3,
-        text: 'Členovia',
-        href: '/clenovia',
+        text: 'Cenník',
+        href: '/cennik',
     },
     {
         id: 4,
-        text: 'Galéria',
-        href: '/galeria',
+        text: 'Kontakt',
+        href: '/#kontakt',
     },
     {
         id: 5,
-        text: 'Kontakt',
-        href: '/#kontakt',
+        text: 'Ordinačné hodiny',
+        href: '/#ordinacne-hodiny',
     }
 ]
 

@@ -4,12 +4,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 //import all home page sections
-import SectionTwo from "../components/sections/domov/section-2";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <SectionTwo />
+    <h1>Hello World</h1>
 
   </Layout>
 )
