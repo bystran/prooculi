@@ -34,7 +34,7 @@ const Sidebar = ({ className, handleClick}) => {
                     Objednajte sa
                 </span>
             </LinkButton>
-        </nav>
+        </nav>  
     )
 }
 

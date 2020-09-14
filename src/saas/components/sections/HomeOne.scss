@@ -1,0 +1,48 @@
+@import '../../app.scss';
+
+.home-1{
+    margin-top: -60px;
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    h1, h2{
+        width: 80%;
+        text-transform: uppercase;
+        padding-left: 5px;
+    }
+    h1{
+        color:white;
+    }
+    .link-btn{
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+    @include mq('phone-wide'){
+        padding-right: 38%;
+        padding-left:5%;
+        .link-btn{
+            margin-top: 50px;
+        }
+    }
+
+}
+.home-1,
+.home-1::before,
+.home-1::after{
+    background-position: 
+    center center,
+    -20vw center
+    
+    ;
+    background-size:
+        cover,
+        auto 100%
+    ;
+    @include mq('phone-wide'){
+        background-position: center center, right center;
+    }
+
+}

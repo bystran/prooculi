@@ -6,9 +6,9 @@
     margin: 0px;
     padding-top: 60px;
     @include mq ( 'tablet' ) {
-        padding-top: 90px
+        padding-top: 60px
     }
     @include mq ( 'desktop' ) {
-        padding-top: 100px;
+        padding-top: 70px;
     }
 }

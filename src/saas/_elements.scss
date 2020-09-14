@@ -30,10 +30,10 @@ hr{
 h1{
     font-size: 30px;
     @include mq('phone-wide'){
-        font-size: 40px;
+        font-size: 35px;
     }
     @include mq('tablet'){
-        font-size: 45px;
+        font-size: 40px;
     }
 }
 h2{
