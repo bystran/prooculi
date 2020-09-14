@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import ArrowIcon from '../assets/icons/arrow-icon.svg'
 
 const LinkButton = (props) => {
   const {
-    background, color, href, children, className
+    background, color, href, children, className, icon
   } = props;
 
   const style = {
@@ -17,7 +18,15 @@ const LinkButton = (props) => {
         style={style}
         className={`link-btn ${className}`}
       >
-        {children}
+        <span className='btn-text'>
+         {children}
+        </span>
+        <span className='btn-icon'>
+          {
+            icon ? icon : <ArrowIcon />
+          }
+        </span>
+
       </span>
     </Link>
   );
