@@ -60,20 +60,6 @@
     }
     @include mq( 'desktop') {
         height: 100px;
-        .top-nav-bar{
-            height: 33px; 
-        }
-        nav.bottom-nav-bar{
-            height: 67px;
-            font-size: 17px;
-            ul{
-                li{
-                    width:163px;
-                }
-            }
-            svg{
-                padding-left: 50px;
-            }
-        }
+        font-size: 17px;
     }
 }

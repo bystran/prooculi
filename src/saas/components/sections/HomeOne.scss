@@ -3,11 +3,12 @@
 .home-1{
     margin-top: -60px;
     min-height: 420px;
-
     display: flex;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
+
+
     h1, h2{
         width: 80%;
         text-transform: uppercase;
@@ -27,22 +28,22 @@
             margin-top: 50px;
         }
     }
+    @include mq('tablet-wide'){
+        height: 80vh;
+    }
+    @include mq('desktop'){
+        height: 700px;
+        padding-right: 60%;
+        margin-top: -70px;
+    }
+    
 
 }
 .home-1,
 .home-1::before,
 .home-1::after{
-    background-position: 
-    center center,
-    -20vw center
-    
-    ;
-    background-size:
-        cover,
-        auto 100%
-    ;
+    background-position: center, -20vw center !important;
     @include mq('phone-wide'){
-        background-position: center center, right center;
+        background-position: center, right center !important;
     }
-
 }
