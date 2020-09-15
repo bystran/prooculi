@@ -5,12 +5,12 @@ import SEO from "../components/seo"
 
 //import all home page sections
 import Home1 from "../components/sections/domov/home1";
-
+import Home2 from "../components/sections/domov/home2";
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Home1 />
-
+    <Home2 />
   </Layout>
 )
 
