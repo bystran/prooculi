@@ -1,0 +1,71 @@
+@import '../../app.scss';
+
+
+.home-3{
+    h2, h1{ 
+        text-transform: uppercase;
+    }
+    text-align: center;
+    padding: 40px 20px;
+    padding-bottom: 80px;
+    p{
+        padding-top: 20px;
+        text-align: left;
+        padding-bottom: 10px
+    }
+    .service-types{
+        padding-bottom: 40px;
+        width: 200px;
+        margin:auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .service-type{
+            svg{
+                width: 60px;
+                height: 60px;
+                background-color: $light-color-1;
+                padding: 30px;
+                margin-top: 20px;
+                border-radius: 15px;
+            }
+            h3{
+                text-transform: uppercase;
+                width: 130px;
+                margin:auto;
+            }   
+        }
+    }
+    @include mq('phone-wide'){
+        .service-types{
+            width: 100%;
+            justify-content: space-evenly ;
+            .service-type{
+                
+            }
+        }
+        h1{
+            width: 520px;
+            margin: auto;
+        }
+        p{
+            max-width: 550px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+    }
+    @include mq('tablet-wide'){
+        padding-top: 150px;
+        .service-types{
+            padding: 20px 0px;
+            margin-bottom: 70px;
+            max-width: 700px;
+            justify-content: space-between;
+
+        }
+        p{
+            max-width: 650px;
+        }
+
+    }
+}
