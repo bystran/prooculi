@@ -37,31 +37,31 @@ const Home2 = () => {
     return (
         <div className='home-2'>
           <div className='home-2-content'>
-            <Link>
+            <Link to='/'>
               <div className='home-2-nav-small home-box'>
                 <h3>Služby</h3>
                 <Eye />
               </div>
             </Link>
-            <Link>
+            <Link to='/'>
               <div className='home-2-nav-small home-box'>
                 <h3>Cenník</h3>
                 <Euro />
               </div>
             </Link>
-            <Link>
+            <Link to='/'>
               <div className='home-2-nav-small home-box'>
                 <h3>Mapa</h3>
                 <Map />
               </div>
             </Link>
-            <Link>
+            <Link to='/'>
               <div className='home-2-nav-small home-box'>
                 <h3>Ordinačné hod.</h3>
                 <AccessTime />
               </div>
             </Link>
-            <Link className='home-2-nav-large home-box'>
+            <Link  to='/' className='home-2-nav-large home-box'>
               <BackgroundImage fluid={combined_bg}
                 className='bg-box'
               >
@@ -71,7 +71,8 @@ const Home2 = () => {
             <div 
               className='home-2-bottom-box home-box'>
       
-              <LinkButton>
+              <LinkButton
+              href='/'>
                 Objednajte sa
               </LinkButton>
               <p>Alebo nám zavolajte v prípade akejkoľvek požiadavky.</p>

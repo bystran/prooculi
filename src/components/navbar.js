@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Links from '../constants/navlinks'; 
 import LinkButton from './LinkButton';
 import '../saas/components/Navbar.scss';
@@ -13,6 +12,7 @@ const navbar = () => {
             <div>
                 <LinkButton
                     className='book-btn'
+                    href="/"
                 >
                     Objednajte sa
                 </LinkButton>

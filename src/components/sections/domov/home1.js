@@ -39,7 +39,9 @@ const Home1 = () => {
             <h1>
                 Majte Krajší pohľad na svet
             </h1>
-            <LinkButton>
+            <LinkButton
+              href="/"
+            >
                 Zistite via
             </LinkButton>
         </BackgroundImage>

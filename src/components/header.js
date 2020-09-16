@@ -21,15 +21,12 @@ const Header = ({ siteTitle }) => {
 
 
     const handleScroll = () => {
-        console.log('scrolling')
         const pastPos = scrollPos
         const currentPos = window.pageYOffset
         let classString = ''
 
-        if(currentPos<30){
+        if(currentPos<10){
             classString = 'at-top'
-        }else if(currentPos>pastPos){
-            classString = classString.concat(' hidden')
         }
 
         setScrollPos(currentPos)
@@ -41,7 +38,7 @@ const Header = ({ siteTitle }) => {
           return () => {
               window.removeEventListener('scroll', handleScroll)
           }
-      })
+      },[])
     return(
       <header className={`page-header ${classes}`}>
         

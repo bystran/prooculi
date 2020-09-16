@@ -13,7 +13,7 @@ const LinkButton = (props) => {
   };
 
   return (
-    <Link href={href}>
+    <Link to={href}>
       <span
         style={style}
         className={`link-btn ${className}`}
