@@ -1,0 +1,54 @@
+@import '../../app.scss';
+
+.contact-section{
+    .working-hours{
+        padding: 15% 10px;
+        background: $primary-color;
+        color: white;
+        h1{
+            color: white; 
+            text-transform: uppercase;
+            font-size: 25px;
+            width: 100%;
+            text-align: center;
+        }
+        h3.work-day{
+            color: $accent-color-2;
+            font-family: $primary-font;
+            text-transform: uppercase;
+            font-weight: normal;
+            text-align: right;
+        }
+        h3.opn-hrs{
+            color:$light-color-2;
+            font-family: $primary-font;
+            text-align: left;
+        }
+        ul{
+            padding:0px;
+            margin:0px;
+            list-style: none;
+            padding-top: 20px;
+            width: 300px;
+            margin: auto;
+            li{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                h3{
+                    width: 44%;
+                    padding: 15px 3%;
+                }
+            }
+            li.active{
+                border: 1px solid $accent-color-2;
+                padding: 5px 0px;
+                h3{
+                    font-size: 21px;
+                }
+            }
+            
+        }
+
+    }
+}
