@@ -1,0 +1,96 @@
+@import '../../app.scss';
+
+.doctor-section{
+    position: relative;
+    padding: 0px 20px;
+    padding-top: 100px;
+    background: linear-gradient(130deg,#90e0ef 0%, #caf0f8 100%);;
+    margin-bottom: 100px;;
+    .doctor-img{
+        position: relative;
+        width: 80%;
+        margin: auto;
+        bottom: -30px;
+        background-size: contain !important;
+        .doctor-bg{
+            position: relative;
+            padding-top:100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        
+        &::after{
+            content: '';
+            position: absolute;
+            width: 120%;
+            z-index: 0;
+            padding-top: 40%;
+            bottom: 0;
+            left: -10%;
+            background: $light-color-2;
+        }
+
+    }
+    h1{
+        padding-bottom: 10px;
+        color: white;
+    }
+    @include mq('phone-wide'){
+        padding-bottom: 100px;
+        h1, h2, p{ 
+            width: 60%;
+        }
+        .doctor-img{
+            position: absolute;
+            width: 250px;
+            right: 20px;
+        
+        }
+    }
+    @include mq('tablet'){
+        padding-left: 50px;
+        h1,h2{
+            width: 50%;
+            margin-right: 50%;
+        }
+        p{
+            width: 60%;
+        }
+        .doctor-img{
+
+        }
+    }
+    @include mq('tablet-wide'){
+        h1,h2,p{
+            width: 500px;
+            margin-right: auto;
+        }
+        .doctor-img{
+            width: 330px;
+            margin-right: 60px
+        }
+    }
+    @include mq('desktop'){
+        padding-left: 100px;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        h1,h2,p{
+            width: 700px;
+            margin-right: auto;
+        }
+        p{
+            font-size: 18px;
+            line-height: 1.8em;
+        }
+        .doctor-img{
+            width: 380px;
+        }
+    }
+    @include mq('desktop-wide'){
+        .doctor-img{
+            width: 400px;
+            margin-right: 100px;
+        }
+    }
+}

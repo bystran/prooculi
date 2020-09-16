@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Home1 from "../components/sections/domov/home1";
 import Home2 from "../components/sections/domov/home2";
 import Home3 from "../components/sections/domov/home3";
+import DocSction from '../components/sections/domov/doctor';
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <Home1 />
     <Home2 />
     <Home3 />
+    <DocSction />
   </Layout>
 )
 
