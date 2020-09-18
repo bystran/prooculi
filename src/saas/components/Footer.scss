@@ -1,0 +1,59 @@
+@import '../app.scss';
+
+
+footer.page-footer{
+    position: relative;
+    padding: 10% 0px;
+    svg{
+        display: block;
+        width: 200px; 
+        height: auto;
+        margin: auto;
+    }
+    ul{
+        padding: 20px 0px;
+        padding-bottom: 40px;
+        margin: 0px; 
+        list-style: none;
+        li{
+            text-align: center;
+            padding: 5px 0px;
+            a{
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+    }
+    .bottom-row{
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+    }
+    @include mq('tablet'){
+        padding: 50px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        svg{
+            margin: 0px;
+        }
+        ul{
+            padding-top: 32px;
+            display: flex;
+            li{
+                padding-right: 20px;
+            }
+        }
+    }
+    @include mq('tablet-wide'){
+        ul{
+            li{
+                padding-right: 30px;
+            }
+        }
+    }
+}
