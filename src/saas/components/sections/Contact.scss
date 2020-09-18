@@ -51,4 +51,62 @@
         }
 
     }
+    .map-wrapper{
+        padding-top : 20px;
+        width: 100%;
+        height: 50vh;
+        svg{
+            position: absolute;
+            top: -20px;
+            left: 0px;
+        }
+    }
+    .contact-card{
+        background-color: $light-color-1;
+        text-align: center;
+        padding: 10% 0px;
+        h1{
+            padding-bottom: 20px;
+        }
+        .info{
+            padding-left: 41px;
+            width: 288px;
+            margin: auto;
+            display: flex;
+            padding-top: 15px;
+            address{
+                font-style:normal;
+                padding-bottom: 10px;
+                p, h3{
+                    text-align: left;
+                    margin: 4px;
+                }
+
+            }
+            svg{
+                padding-right: 20px;
+            }
+        }
+    }
+    @include mq('tablet'){
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .contact-card, .working-hours{
+            width: 50%;
+            padding: 0px;
+
+        }
+        .working-hours{
+            padding: 8% 0px;
+        }
+        .contact-card{
+            padding: 3.5% 0px;
+        }
+    }
+    @include mq('tablet'){
+        .contact-card{
+            padding: 5% 0px;
+        }
+    }
 }
