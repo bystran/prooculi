@@ -1,11 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
+import LinkButton from '../components/LinkButton';
+import MagnGlass from '../assets/icons/magnifying_glass.svg';
+import Glasses from '../assets/icons/glasses.svg';
+import Flower from '../assets/icons/flower.svg';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import '../saas/components/pages/services.scss';
 
-const sevicesData = [
+
+const servicesData = [
   {
     heading: `Vyšetrenia`,
     data: [
@@ -104,6 +109,64 @@ const sevicesData = [
 const About = () => (
   <Layout>
     <SEO title="Page two" />
+    <div className='services-page-wrapper'>
+      <nav className='side-nav'>
+        <h1>Služby</h1>
+        <ul>
+          <li>
+            <MagnGlass />
+            <h3>Vyšetrenia</h3>
+          </li>
+          <li>
+            <Glasses />
+            <h3>Starostlivosť</h3>
+          </li>
+          <li>
+            <Flower />
+            <h3>Estetická medicína</h3>
+          </li>
+        </ul>
+      </nav>
+      <div className='content'> 
+        {
+          servicesData.map( ctg =>
+            <div className='service-catg'>
+              <h2>{ctg.heading}</h2>
+              <ul>
+                {
+                  ctg.data.map(service => 
+                    <li>
+                      <h3>
+                        {service.heading}
+                      </h3>
+                      <p>
+                        {service.subheading}
+                      </p>
+                    </li>  
+                  )
+                }
+              </ul>
+            </div>
+          )
+        }
+      </div>
+    </div>
+    <div className='btn-wrp'>
+      <LinkButton
+        href="/cennik"
+      >
+        Pozriet si ceny
+      </LinkButton>
+      <LinkButton
+        href='/#kontakt'
+      >
+        Objednať sa
+      </LinkButton>
+
+
+
+    </div>
+
   </Layout>
 )
 

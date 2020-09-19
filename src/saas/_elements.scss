@@ -2,7 +2,9 @@
 @import 'mixins';
 
 
-
+a{
+    text-decoration: none;
+}
 
 body{
     font-family: $primary-font;
