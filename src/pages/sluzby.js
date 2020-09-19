@@ -62,7 +62,41 @@ const sevicesData = [
         subheading: ``
       },
     ]
-  }
+  },
+  {
+    heading:`Starostlivosť`,
+    data:[
+      {
+        heading: `korekcia refrakčných chýb oka, predpis okuliarov `,
+        subheading: ``
+      },
+      {
+        heading: `dispenzárna starostlivosť`,
+        subheading: `pri chronických ochoreniach /glaukóm, VPDM, diabetická retinopatia`
+      },
+      {
+        heading: `kontaktné šošovky`,
+        subheading: `vyšetrenie, nácvik aplikácie, kontroly`
+      },
+    ],
+  },
+  {
+    heading:`Estetická medicína`,
+    data:[
+      {
+        heading: `Aplikácia botulotoxínu A na odstránenie vrások `,
+        subheading: ``
+      },
+      {
+        heading: `Niťový lifting`,
+        subheading: ``
+      },
+      {
+        heading: `Skinbooster a biorevitalizácia prístrojom vital injector`,
+        subheading: ``
+      },
+    ],
+  },
 ] 
 
 
