@@ -1,7 +1,17 @@
 @import '../../app.scss';
 
+@include mq('desktop'){
+    .banner-2,
+    .banner-2::before,
+    .banner-2::after{
+        background-position: center !important;
+        margin-bottom: 50px;
+    }
+}
+
 
 .cennik-content{
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
 
@@ -14,7 +24,8 @@
 
     }
     h2{
-        margin: 20px 0px;   
+        margin: 20px 0px;  
+        margin-top: 50px; 
         font-size: 25px;
         color: $primary-color;
         font-family: $heading-font;
@@ -46,6 +57,7 @@
         }
     }
     @include mq('desktop'){
+        padding-top: 200px;
         ul{
             width: 1136px;
         }

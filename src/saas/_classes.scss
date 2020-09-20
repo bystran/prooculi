@@ -34,3 +34,48 @@
 .accent-1{
     color: #5B97FF;
 }
+.banner{
+    position: relative;
+    z-index: 99;
+    margin-top: -60px;
+    height: 200px;
+    padding-top: 60px;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    h2{
+        margin: 0px;
+        width: 100%;
+    }
+    
+    h1{
+        width: 200px;
+        text-transform: uppercase;
+        color: white;
+    }
+    h2{
+        color: $primary-color-2;
+    }
+    @include mq('tablet'){
+        height: 400px;
+        h1{
+            width: 300px;;
+        }
+    }
+    @include mq('tablet-wide'){
+        height: 500px;
+    }
+    @include mq('desktop'){
+        padding-left: 5%;
+        height: 450px;
+        margin-top: -70px;
+        padding-top: 120px;
+        background-position: top !important ;
+        &::before,
+        &::after{
+            background-position: top !important;
+        }
+    }
+}

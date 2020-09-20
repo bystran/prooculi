@@ -1,8 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link ,graphql} from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BgImage from 'gatsby-background-image';
 
 import '../saas/components/pages/cennik.scss';
 
@@ -121,34 +122,60 @@ const priceData = [
   }
 ]
 
-const Members = () => (
-  <Layout>
-    <SEO title="Cenník" />
-    <div className='cennik-content'>
-      {
-        priceData.map( catg => 
-          <>
-            <h2>{catg.category}
-              <span>{` od ${Math.min(...catg.data.map(o => o.price))}€ do ${Math.max(...catg.data.map(o => o.price),0)}€`}</span></h2>
-            <ul>
-              {
-                catg.data.map(item => 
-                  <li class='small-box-with-shadow'>
-                    <h3>{item.heading}</h3>
-                    <p>
-                      {item.subheading}
-                    </p>
-                    <p className='price'>{`${item.from ? 'od': ''} ${item.price}€`}</p>
-                  </li>
-                )
-              }
-            </ul>
-          </>
-        )
+const Prices = ({data:{file:{img:{fluid}}}})  => {
+  const bgStack = [
+    `linear-gradient( rgba(108, 189, 208, 0.58) 0%, rgba(108, 189, 208, 0.78) 100%)`,
+    fluid
+  ]
+  
+  return (
+    <Layout>
+      <SEO title="Cenník" />
+      <BgImage
+        className='banner banner-2'
+        fluid={bgStack}>
+        <h1 className='white'>
+           Cenník služieb
+        </h1>
+      </BgImage>
+      <div className='cennik-content'>
+        {
+          priceData.map( catg => 
+            <>
+              <h2>{catg.category}
+                <span>{` od ${Math.min(...catg.data.map(o => o.price))}€ do ${Math.max(...catg.data.map(o => o.price),0)}€`}</span></h2>
+              <ul>
+                {
+                  catg.data.map(item => 
+                    <li class='small-box-with-shadow'>
+                      <h3>{item.heading}</h3>
+                      <p>
+                        {item.subheading}
+                      </p>
+                      <p className='price'>{`${item.from ? 'od': ''} ${item.price}€`}</p>
+                    </li>
+                  )
+                }
+              </ul>
+            </>
+          )
+        }
+      </div>
+
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  {
+    file(relativePath: {eq: "glasses.jpg"}) {
+      img:childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
-    </div>
+    }
+  }
+`
 
-  </Layout>
-)
-
-export default Members
+export default Prices

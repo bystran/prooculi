@@ -1,4 +1,5 @@
 import React from "react"
+import {graphql} from 'gatsby'
 import LinkButton from '../components/LinkButton';
 import MagnGlass from '../assets/icons/magnifying_glass.svg';
 import Glasses from '../assets/icons/glasses.svg';
@@ -6,7 +7,7 @@ import Flower from '../assets/icons/flower.svg';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import BgImage from 'gatsby-background-image';
 import '../saas/components/pages/services.scss';
 
 
@@ -106,68 +107,101 @@ const servicesData = [
 
 
 
-const About = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <div className='services-page-wrapper'>
-      <nav className='side-nav'>
-        <h1>Služby</h1>
-        <ul>
-          <li>
-            <MagnGlass />
-            <h3>Vyšetrenia</h3>
-          </li>
-          <li>
-            <Glasses />
-            <h3>Starostlivosť</h3>
-          </li>
-          <li>
-            <Flower />
-            <h3>Estetická medicína</h3>
-          </li>
-        </ul>
-      </nav>
-      <div className='content'> 
-        {
-          servicesData.map( ctg =>
-            <div className='service-catg'>
-              <h2>{ctg.heading}</h2>
-              <ul>
-                {
-                  ctg.data.map(service => 
-                    <li>
-                      <h3>
-                        {service.heading}
-                      </h3>
-                      <p>
-                        {service.subheading}
-                      </p>
-                    </li>  
-                  )
-                }
-              </ul>
-            </div>
-          )
-        }
+const Services = ({data:{file:{img:{fluid}}}}) =>
+{
+  const bgStack = [
+    `linear-gradient( rgba(108, 189, 208, 0.58) 0%, rgba(108, 189, 208, 0.78) 100%)`,
+    fluid
+  ]
+
+    return(
+
+    <Layout>
+      
+      <SEO title="Page two" />
+
+      <BgImage
+        className='banner'
+        fluid={bgStack}>
+        <h2>Krajší pohľad na svet</h2>
+        <h1 className='white'>
+        Pozrieme sa 
+        na vaše Oči
+        </h1>
+      </BgImage>
+    
+
+      <div className='services-page-wrapper'>
+        <nav className='side-nav'>
+          <h1>Služby</h1>
+          <ul>
+            <li>
+              <MagnGlass />
+              <h3>Vyšetrenia</h3>
+            </li>
+            <li>
+              <Glasses />
+              <h3>Starostlivosť</h3>
+            </li>
+            <li>
+              <Flower />
+              <h3>Estetická medicína</h3>
+            </li>
+          </ul>
+        </nav>
+        <div className='content'> 
+          {
+            servicesData.map( ctg =>
+              <div className='service-catg'>
+                <h2>{ctg.heading}</h2>
+                <ul>
+                  {
+                    ctg.data.map(service => 
+                      <li>
+                        <h3>
+                          {service.heading}
+                        </h3>
+                        <p>
+                          {service.subheading}
+                        </p>
+                      </li>  
+                    )
+                  }
+                </ul>
+              </div>
+            )
+          }
+        </div>
       </div>
-    </div>
-    <div className='btn-wrp'>
-      <LinkButton
-        href="/cennik"
-      >
-        Pozriet si ceny
-      </LinkButton>
-      <LinkButton
-        href='/#kontakt'
-      >
-        Objednať sa
-      </LinkButton>
+      <div className='btn-wrp'>
+        <LinkButton
+          href="/cennik"
+        >
+          Pozriet si ceny
+        </LinkButton>
+        <LinkButton
+          href='/#kontakt'
+        >
+          Objednať sa
+        </LinkButton>
 
 
 
-    </div>
+      </div>
 
-  </Layout>
-)
+    </Layout>
+  )
+}
+export const query = graphql`
+  {
+    file(relativePath: {eq: "lady_holding_glasses.jpg"}) {
+      img:childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
-export default About
+export default Services
