@@ -4,13 +4,15 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import '../saas/components/pages/cennik.scss';
+
 const priceData = [
   {
     category: `Vyšetrenia`,
     data:[
       {
         heading: `Kompletné očne vyšetrenie `,
-        subheading: `(predný segment, zraková ostrosť, vnútroočný tlak, očné pozadie s rozkvapkaním.`,
+        subheading: `predný segment, zraková ostrosť, vnútroočný tlak, očné pozadie s rozkvapkaním.`,
         price:35
       },
       {
@@ -121,10 +123,31 @@ const priceData = [
 
 const Members = () => (
   <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <SEO title="Cenník" />
+    <div className='cennik-content'>
+      {
+        priceData.map( catg => 
+          <>
+            <h2>{catg.category}
+              <span>{` od ${Math.min(...catg.data.map(o => o.price))}€ do ${Math.max(...catg.data.map(o => o.price),0)}€`}</span></h2>
+            <ul>
+              {
+                catg.data.map(item => 
+                  <li class='small-box-with-shadow'>
+                    <h3>{item.heading}</h3>
+                    <p>
+                      {item.subheading}
+                    </p>
+                    <p className='price'>{`${item.from ? 'od': ''} ${item.price}€`}</p>
+                  </li>
+                )
+              }
+            </ul>
+          </>
+        )
+      }
+    </div>
+
   </Layout>
 )
 

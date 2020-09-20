@@ -10,7 +10,7 @@ const links = [
     {
         id: 2,
         text: 'Služby',
-        href: '/služby',
+        href: '/sluzby',
     },
     {
         id: 3,

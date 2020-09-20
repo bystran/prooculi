@@ -1,0 +1,85 @@
+@import '../../app.scss';
+
+
+.cennik-content{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+
+    }
+    h2{
+        margin: 20px 0px;   
+        font-size: 25px;
+        color: $primary-color;
+        font-family: $heading-font;
+        font-weight: bold;
+        span{
+            font-size: 20px;
+            font-weight: normal;
+            padding-left: 15px;
+        }
+    }
+    @include mq('phablet'){
+        display: initial;
+        h2{
+            text-align: center;
+        }
+        ul{
+            width: 568px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                margin:5px;
+            }
+        }
+    }
+    @include mq('tablet-wide'){
+        ul{
+            width: 852px;
+        }
+    }
+    @include mq('desktop'){
+        ul{
+            width: 1136px;
+        }
+    }
+}
+
+.small-box-with-shadow{
+    box-shadow: 5px 15px 41px rgba(20, 163, 197, 0.2);
+    border: 1px solid $light-color-1;
+    border-radius: 15px;
+    width: 230px;
+    padding: 20px;;
+    height: 150px;
+    position: relative;
+    background: white;
+    z-index: 1;
+    margin-bottom: 20px;
+    p{
+        font-size: 16px;
+    }
+    p.price{
+        position: absolute;
+        bottom: -5px;
+        right: 20px;
+        font-size: 25px;
+        font-family: $heading-font;
+        font-weight: bold;
+        text-align: right;
+        color: $primary-color-2;
+    }
+    h3{
+        color: $accent-color;
+    }
+
+
+}
+
