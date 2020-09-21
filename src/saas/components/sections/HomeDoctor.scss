@@ -88,6 +88,7 @@
         }
     }
     @include mq('desktop-wide'){
+        margin-top: 120px;
         .doctor-img{
             width: 400px;
             margin-right: 100px;

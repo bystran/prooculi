@@ -41,7 +41,7 @@ h1{
 h2{
     font-size:16px;
     font-weight: normal;
-    color: $accent-color;
+    color: $primary-color-2;
     @include mq('tablet'){
         font-size:22px;
     }

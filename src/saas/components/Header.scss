@@ -45,9 +45,12 @@ header.page-header{
 
     }
     .nav-bar{display: none; transition: transform .1s;}
+    .book-btn{
+        display: none !important;
+    }
     @include mq( 'tablet-wide' ) {
-        .nav-bar{
-            display: initial;
+        .nav-bar, .book-btn{
+            display: initial !important;
         }
         height: 60px;
         justify-content: space-around;

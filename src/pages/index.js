@@ -12,7 +12,7 @@ import Contact from '../components/sections/domov/contatct';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Domov" />
     <Home1 />
     <Home2 />
     <Home3 />

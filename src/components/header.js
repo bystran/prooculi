@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 import Sidebar from "./Sidebar"
 import NavBar from './navbar';
+import {throttle} from 'lodash'
 
 import Logo from '../assets/icons/Logo.svg';
 import MenuIcon from '../assets/icons/menu_icon.svg';
@@ -21,22 +22,29 @@ const Header = ({ siteTitle }) => {
 
 
     const handleScroll = () => {
+        console.log('scrolling')
         const pastPos = scrollPos
         const currentPos = window.pageYOffset
         let classString = ''
 
         if(currentPos<10){
             classString = 'at-top'
+            setScrollPos(currentPos)
+            setClasses(classString)
+        }else if(classes !== ''){
+          setScrollPos(currentPos)
+          setClasses(classString)
         }
 
-        setScrollPos(currentPos)
-        setClasses(classString)
+
     }
+    const trhottledHandleScroll = throttle(handleScroll, 100);
+
 
       useEffect(()=>{
-          window.addEventListener('scroll', handleScroll);
+          window.addEventListener('scroll', trhottledHandleScroll);
           return () => {
-              window.removeEventListener('scroll', handleScroll)
+              window.removeEventListener('scroll', trhottledHandleScroll);
           }
       },[])
     return(

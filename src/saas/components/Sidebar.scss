@@ -118,7 +118,7 @@ nav.side-bar{
             display:block;
             border-bottom: 1px solid $accent-color;
         }
-        
+
     }
     &.hidden{
         transform: translateX(100vw);
@@ -127,20 +127,24 @@ nav.side-bar{
 
 
     @include mq('phone-wide'){
-        width: 85%;
+        width: 100%;
         ul.nav-links{
             padding:0px 5%;
             margin:0px;
-            width: 90%;
+            width: 80%;
             display: flex;
             justify-content: space-between;
             li{
                 padding:0px;
                 display:inline-block;
             }
+            padding-bottom: 50px;
+        }
+        .close-button{
+            top: 20px ;
         }
     }
-    @include mq('tablet'){
+    @include mq('tablet-wide'){
         display: none;
     }
 }

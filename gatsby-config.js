@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Prooculi`,
-    description: `ski club vicotry`,
+    description: `Ponúka služby medicínskeho odboru oftalmológia, diagnostiku a liečbu akútnych,
+    chronických ochorení oka, vyšetrenie očného pozadia, vyšetrenia zrakovej ostrosti,
+    preventívne prehliadky, drobné chirurgické a estetické zákroky.
+    Profesionálny a ľudský prístup, moderné prístrojové vybavenie v príjemnom prostredí novej
+    očnej ambulancie.`,
     author: `@bystran`,
   },
   plugins: [
@@ -26,7 +30,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        //icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/eye.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

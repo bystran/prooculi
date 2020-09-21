@@ -12,7 +12,7 @@ const navbar = () => {
             <div>
                 <LinkButton
                     className='book-btn'
-                    href="/"
+                    href="/#kontakt"
                 >
                     Objednajte sa
                 </LinkButton>

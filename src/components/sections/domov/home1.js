@@ -40,7 +40,7 @@ const Home1 = () => {
                 Krajší pohľad na svet
             </h1>
             <LinkButton
-              href="/"
+              href="/#o-nas"
             >
                 Zistite viac
             </LinkButton>

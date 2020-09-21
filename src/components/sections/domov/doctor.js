@@ -18,7 +18,7 @@ const query = graphql`
 const Doctor = () => {
     const {file:{img:{fluid}}} = useStaticQuery(query);
     return (
-        <div className="doctor-section">
+        <div className="doctor-section" id='doktorka'>
             <h2>
                 Očný lekár
             </h2>

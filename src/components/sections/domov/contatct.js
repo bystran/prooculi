@@ -50,7 +50,7 @@ const Contact = () => {
     const currentDate = moment().day()
     return (
         <div className='contact-section'>
-            <div className='working-hours'>
+            <div className='working-hours' id='ordinacne-hodiny'>
                 <h1>
                     Otváracie hodiny
                 </h1>
@@ -71,7 +71,7 @@ const Contact = () => {
                     }
                 </ul>
             </div>
-            <div className='contact-card'>
+            <div className='contact-card'  id='kontakt'>
                 <h1 className='info'>Kontakt</h1>
                 <div className='info'>
                     <PlaceIcon />
@@ -98,14 +98,14 @@ const Contact = () => {
 
                 <div className="info">
                     <MessengerIcon />
-                    <a className="text" href="https://m.me/skiclubvictory">
+                    <a className="text" href="/">
                         messenger
                     </a>
                 </div>
 
 
             </div>
-            <div className='map-wrapper'>
+            <div className='map-wrapper' id='mapa'>
                     <Map
                         bootstrapURLKeys={
                           {

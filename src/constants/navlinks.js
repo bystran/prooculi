@@ -4,8 +4,8 @@ import { Link } from 'gatsby'
 const links = [
     { 
         id: 1,
-        text: 'O nás',
-        href: '/#o-nas',
+        text: 'Domov',
+        href: '/',
     },
     {
         id: 2,

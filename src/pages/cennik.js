@@ -81,12 +81,6 @@ const priceData = [
         subheading: ``,
         price: 10 
       },
-
-    ]
-  },
-  {
-    category: `Starostlivosť`,
-    data:[
       {
         heading: `Nácvik aplikácie kontaktných šošoviek`,
         subheading: `skúšobné kontaktné šošovky, roztok`,
@@ -96,6 +90,29 @@ const priceData = [
         heading: `Konzultácia nálezu`,
         subheading: ``,
         price: 20,
+      },
+
+    ]
+  },
+  {
+    category: `Chirurgické výkony`,
+    data:[
+      {
+        heading: `Odstránenie jačmeňa`,
+        subheading: ``,
+        price: 50,
+      },
+      {
+        heading: `Odstránenie znamienok, xantelaziem, bradavíc, tumorov v okolí oka`,
+        subheading: ``,
+        from: true,
+        price: 50,
+      },
+      {
+        heading: `Epilácia rias`,
+        subheading: `Odstránenie znamienok, xantelaziem, bradavíc, tumorov v okolí`,
+        from: true,
+        price: 10,
       },
     ]
   },

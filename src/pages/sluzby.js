@@ -1,14 +1,16 @@
 import React from "react"
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import LinkButton from '../components/LinkButton';
 import MagnGlass from '../assets/icons/magnifying_glass.svg';
-import Glasses from '../assets/icons/glasses.svg';
+import Surgery from '../assets/icons/surgery.svg';
 import Flower from '../assets/icons/flower.svg';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BgImage from 'gatsby-background-image';
 import '../saas/components/pages/services.scss';
+
+import slugify from 'slugify'
 
 
 const servicesData = [
@@ -67,11 +69,6 @@ const servicesData = [
         heading: `preventívne vyšetrenia `,
         subheading: ``
       },
-    ]
-  },
-  {
-    heading:`Starostlivosť`,
-    data:[
       {
         heading: `korekcia refrakčných chýb oka, predpis okuliarov `,
         subheading: ``
@@ -83,6 +80,23 @@ const servicesData = [
       {
         heading: `kontaktné šošovky`,
         subheading: `vyšetrenie, nácvik aplikácie, kontroly`
+      },
+    ]
+  },
+  {
+    heading:`Chirurgické výkony`,
+    data:[
+      {
+        heading: `Odstránenie jačmeňa`,
+        subheading: ``
+      },
+      {
+        heading: `Odstránenie znamienok, xantelaziem, bradavíc, tumorov v okolí oka`,
+        subheading: ``
+      },
+      {
+        heading: `Epilácia rias`,
+        subheading: ``
       },
     ],
   },
@@ -118,7 +132,7 @@ const Services = ({data:{file:{img:{fluid}}}}) =>
 
     <Layout>
       
-      <SEO title="Page two" />
+      <SEO title="Služby" />
 
       <BgImage
         className='banner'
@@ -135,25 +149,31 @@ const Services = ({data:{file:{img:{fluid}}}}) =>
         <nav className='side-nav'>
           <h1>Služby</h1>
           <ul>
-            <li>
-              <MagnGlass />
-              <h3>Vyšetrenia</h3>
-            </li>
-            <li>
-              <Glasses />
-              <h3>Starostlivosť</h3>
-            </li>
-            <li>
-              <Flower />
-              <h3>Estetická medicína</h3>
-            </li>
+            <Link to="#vysetrenia">
+              <li>
+                <MagnGlass />
+                <h3>Vyšetrenia</h3>
+              </li>
+            </Link>
+            <Link to="#chirurgicke-vykony">
+              <li>
+                <Surgery />
+                <h3>Chirurgické výkony</h3>
+              </li>
+            </Link>
+            <Link to="#esteticka-medicina">
+              <li>
+                <Flower />
+                <h3>Estetická medicína</h3>
+              </li>
+            </Link>
           </ul>
         </nav>
         <div className='content'> 
           {
             servicesData.map( ctg =>
-              <div className='service-catg'>
-                <h2>{ctg.heading}</h2>
+              <div className='service-catg' id={slugify(ctg.heading,{lower:true})}>
+                <h2 >{ctg.heading}</h2>
                 <ul>
                   {
                     ctg.data.map(service => 

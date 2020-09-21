@@ -1,7 +1,7 @@
 import React from 'react'
 import LinkButton from '../../LinkButton';
 import MagnGlass from '../../../assets/icons/magnifying_glass.svg';
-import Glasses from '../../../assets/icons/glasses.svg';
+import Surgery from '../../../assets/icons/surgery.svg';
 import Flower from '../../../assets/icons/flower.svg';
 
 import '../../../saas/components/sections/HomeThree.scss';
@@ -14,8 +14,8 @@ const serviceTypes = [
     },
     {
         id: 1,
-        name: 'Starostlivosť',
-        icon: <Glasses />,
+        name: 'chirurgické výkony',
+        icon: <Surgery />,
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ const serviceTypes = [
 
 const Home3 = () => {
     return (
-        <div className='home-3'>
+        <div className='home-3' id='o-nas'>
             <h2>
                 Očná Ambulancia Prooculli
             </h2>
@@ -34,12 +34,11 @@ const Home3 = () => {
                 Kompletne vyšetrania vášho zraku 
             </h1>
             <p>
-                Zistíme príčinu vášho zrakového problému a poskytneme
-                vám vhodné riešenie. Využívame najmodrenejšie
-                prístroje a postupy na detekciu chyb, ktoré vám 
-                potom aj v spolupráci s naším partnerom pomôžeme
-                vyriešiť. Oftalmologická starostlivosť poskytujeme
-                pre dospelých a deti od 7 rokov.
+            Ponúka služby medicínskeho odboru oftalmológia, diagnostiku a liečbu akútnych,
+            chronických ochorení oka, vyšetrenie očného pozadia, vyšetrenia zrakovej ostrosti,
+            preventívne prehliadky, drobné chirurgické a estetické zákroky.
+            Profesionálny a ľudský prístup, moderné prístrojové vybavenie v príjemnom prostredí novej
+            očnej ambulancie.
 
             </p>
             <div className='service-types'>
