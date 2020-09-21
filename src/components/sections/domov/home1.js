@@ -37,12 +37,12 @@ const Home1 = () => {
                 Očná Ambulancia
             </h2>
             <h1>
-                Majte Krajší pohľad na svet
+                Krajší pohľad na svet
             </h1>
             <LinkButton
               href="/"
             >
-                Zistite via
+                Zistite viac
             </LinkButton>
         </BackgroundImage>
     )
