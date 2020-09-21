@@ -53,7 +53,7 @@ const Home3 = () => {
             </div>
 
             <LinkButton
-                href='/'
+                href='/sluzby'
             >
                 Pozrite všetky služby
             </LinkButton>
