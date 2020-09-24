@@ -16,11 +16,11 @@ header.page-header{
     a.logo{
         text-decoration: none;
         display: block;
-        padding-right: 70px;
-        svg{
+        padding-right: 50px;
+        .gatsby-image-wrapper{
             transition: transform .1s;
-            height: 40px;   
-            width: auto; 
+            height: 35px;   
+            width: 145px; 
 
         }
     }
@@ -64,17 +64,15 @@ header.page-header{
             height: 60px;
             display: flex;
             align-items: center;
-            svg{
-                height: 40px;
-            }
         }
     }
     @include mq ( 'desktop' ) {
         height: 70px;
         a.logo {
             height: 70px;  
-            svg{
-                height: 43px;
+            .gatsby-image-wrapper{
+                height: 42px;
+                width: 170px;
             }
         }
     } 
@@ -85,11 +83,10 @@ header.page-header.at-top{
     box-shadow: none;
     @include mq('tablet-wide'){
         
-        transform: translateY(10px) translateX(30px);
+        transform: translateY(20px) translateX(30px);
         a.logo{
-            svg{
-                
-                transform: scale(1.8) translateX(20px);
+            .gatsby-image-wrapper{
+                transform: scale(1.7) translateX(20px);
             }
         }
         .nav-bar{

@@ -37,9 +37,11 @@ nav.side-bar{
        position: absolute;
        top:0;
        display: block;
-       svg{
-            width: 180px; 
+       .gatsby-image-wrapper{
+            height: 60px;
+            width: 250px; 
             margin: 0px;
+            margin-top: 20px;
        }
     }
     ul.nav-links{

@@ -28,7 +28,7 @@ const Doctor = () => {
             <p>
                 Štúdium na Jeseniovej lekárskej fakulte Univerzity
                 Komenského v Martine ukončila v roku 2008.  Od roku
-                2008 do roku 2012 pracovala na Angiochirurgii UN Bratislava
+                2008 do roku 2012 pracovala na Angiochirurgii UN Bratislava.
                 Od roku 2012 do roku 2017 pracovala na Očnej klinike
                 SZU Univerzitnej nemocnice Bratislava a v súkromnej očnej
                 ambulancii Mauro Simon v Pezinku. Od roku 2017 po súčasnosť

@@ -1,10 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Logo from '../assets/icons/Logo.svg';
+import { Link } from 'gatsby';
+import Logo from './Logo';
+
 import Links from '../constants/navlinks';
 import CloseIcon from '../assets/icons/close_icon.svg';
 import LinkButton from './LinkButton';
 import '../saas/components/Sidebar.scss';
+
+
 
 const Sidebar = ({ className, handleClick}) => {
 
@@ -22,7 +25,7 @@ const Sidebar = ({ className, handleClick}) => {
                 to="/"
                 className="logo-side-bar"
             >
-                <Logo  /> 
+                <Logo />
             </Link>
             <Links
             />

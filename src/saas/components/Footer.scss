@@ -4,10 +4,10 @@
 footer.page-footer{
     position: relative;
     padding: 10% 0px;
-    svg{
+    .gatsby-image-wrapper{
         display: block;
         width: 200px; 
-        height: auto;
+        height: 48px;
         margin: auto;
     }
     ul{
@@ -38,7 +38,7 @@ footer.page-footer{
         justify-content: space-evenly;
         align-items: center;
         align-content: center;
-        svg{
+        .gatsby-image-wrapper{
             margin: 0px;
         }
         ul{

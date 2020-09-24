@@ -4,13 +4,15 @@ import React, { useState, useEffect } from "react"
 import Sidebar from "./Sidebar"
 import NavBar from './navbar';
 import {throttle} from 'lodash'
+import Logo from './Logo';
 
-import Logo from '../assets/icons/Logo.svg';
 import MenuIcon from '../assets/icons/menu_icon.svg';
 
 import '../saas/components/Header.scss';
 
-const Header = ({ siteTitle }) => {
+
+
+const Header = ({ siteTitle }, ) => {
     const [ hidden, setHidden ] = useState(true)
     const [scrollPos, setScrollPos] = useState(0)
     const [classes, setClasses] = useState("at-top")
@@ -55,7 +57,7 @@ const Header = ({ siteTitle }) => {
               to="/"
               className="logo"
           >
-              <Logo  /> 
+              <Logo />
             </Link>
         </div>
         <div className='mobile-menu-icon'
@@ -84,5 +86,7 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
+
 
 export default Header

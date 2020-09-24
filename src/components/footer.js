@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../assets/icons/Logo.svg';
+import Logo from './Logo';
 import NavLinks from '../constants/navlinks';
 import '../saas/components/Footer.scss';
 
