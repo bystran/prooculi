@@ -7,8 +7,25 @@ import MessengerIcon from '../../../assets/icons/messenger.svg';
 import PlaceIcon from '../../../assets/icons/place.svg';
 import Map from 'google-map-react'
 
+import {useStaticQuery, graphql} from 'gatsby';
+
+import Image from 'gatsby-image'
+
 
 import '../../../saas/components/sections/Contact.scss';
+
+const query = graphql`
+  {
+    file(relativePath: {eq: "place_marker.png"}) {
+      img:childImageSharp  {
+        fluid (maxWidth: 400) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
+
 
 
 const workingHours = [
@@ -22,32 +39,33 @@ const workingHours = [
         id: 2,
         label: `Utorok`,
         start: `10:00`,
-        end: `18:30`,
+        end: `18:00`,
     },
     {
         id: 3,
         label: `Streda`,
         start: `8:00`,
-        end: `16:30`,
+        end: `16:00`,
     },
     {
         id: 4,
         label: `Štvrtok`,
-        start: `-`,
-        end: `-`
+        start: `8:00`,
+        end: `16:00`
     },
     {
         id: 5,
         label: `Piatok`,
         start: `8:00`,
-        end: `14:30`
+        end: `14:00`
     }
 ]
 const phone = '0911 938 970'
 const email = 'info@prooculi.sk'
 
 const Contact = () => {
-    const currentDate = moment().day()
+    const currentDate = moment().day();
+    const {file:{img:{fluid}}} = useStaticQuery(query);
     return (
         <div className='contact-section'>
             <div className='working-hours' id='ordinacne-hodiny'>
@@ -367,7 +385,7 @@ const Contact = () => {
                         }
                     
                     >
-                       <PlaceIcon lat="48.083349" lng="17.262696" />
+                       <Image fluid={fluid} lat="48.083349" lng="17.262696" />
 
                     </Map>
 

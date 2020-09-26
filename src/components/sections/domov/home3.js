@@ -3,6 +3,8 @@ import LinkButton from '../../LinkButton';
 import MagnGlass from '../../../assets/icons/magnifying_glass.svg';
 import Surgery from '../../../assets/icons/surgery.svg';
 import Flower from '../../../assets/icons/flower.svg';
+import {Link} from 'gatsby'
+import slugify from 'slugify'
 
 import '../../../saas/components/sections/HomeThree.scss';
 
@@ -31,7 +33,7 @@ const Home3 = () => {
                 Očná Ambulancia Prooculli
             </h2>
             <h1>
-                Kompletne vyšetrania vášho zraku 
+                Kompletná starostlivosť o Váš zrak
             </h1>
             <p>
             Ponúka služby medicínskeho odboru oftalmológia, diagnostiku a liečbu akútnych,
@@ -44,10 +46,10 @@ const Home3 = () => {
             <div className='service-types'>
                 {
                     serviceTypes.map( sType => 
-                        <div key={sType.id} className='service-type'>
+                        <Link key={sType.id} to={`/sluzby/#${slugify(sType.name, {lower:true})}`} className='service-type'>
                             {sType.icon}
                             <h3>{sType.name}</h3>
-                        </div>    
+                        </Link>    
                     )
                 }
             </div>
