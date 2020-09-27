@@ -10,7 +10,7 @@ const Facebook = () => {
         <div className='facebook-section'>
             
         <FacebookProvider appId='1202272930155681'>
-            <Page  href="https://www.facebook.com/prooculi" tabs="timeline" />
+            <Page  href="https://www.facebook.com/prooculi" tabs="timeline" lazy={true} />
         </FacebookProvider>
         </div>
         </>

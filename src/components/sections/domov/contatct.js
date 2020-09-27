@@ -7,6 +7,7 @@ import MessengerIcon from '../../../assets/icons/messenger.svg';
 import PlaceIcon from '../../../assets/icons/place.svg';
 import Map from 'google-map-react'
 
+
 import {useStaticQuery, graphql} from 'gatsby';
 
 import Image from 'gatsby-image'

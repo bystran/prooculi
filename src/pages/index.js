@@ -10,6 +10,8 @@ import Home3 from "../components/sections/domov/home3";
 import DocSction from '../components/sections/domov/doctor';
 import Contact from '../components/sections/domov/contatct';
 import Facebook from '../components/sections/domov/facebook';
+import LazyLoad from 'react-lazyload'
+import Spinner from 'react-spinners/CircleLoader'
 
 
 const IndexPage = () => (
@@ -20,8 +22,15 @@ const IndexPage = () => (
     <Home2 />
     <Home3 />
     <DocSction />
-    <Contact />
-    <Facebook />
+    <LazyLoad
+      height='1000'
+      offset='1000'
+      placeholder={<Spinner />} 
+    >
+      <Contact />
+      <Facebook />
+    </LazyLoad>
+
   </Layout>
 )
 
