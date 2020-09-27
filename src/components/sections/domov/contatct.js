@@ -117,7 +117,7 @@ const Contact = () => {
 
                 <div className="info">
                     <MessengerIcon />
-                    <a className="text" href="/">
+                    <a className="text" href="https://m.me/prooculi">
                         messenger
                     </a>
                 </div>
