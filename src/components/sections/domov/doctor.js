@@ -32,7 +32,7 @@ const Doctor = () => {
                 Od roku 2012 do roku 2017 pracovala na Očnej klinike
                 SZU Univerzitnej nemocnice Bratislava a v súkromnej očnej
                 ambulancii Mauro Simon v Pezinku. Od roku 2017 po súčasnosť
-                pracuje v Centre mikrochirurgie oka Bratislava V roku 2019
+                pracuje v Centre mikrochirurgie oka Bratislava. V roku 2019
                 získala atestáciu z medicínskeho oboru oftalmológia.
                 Absolvovala odborné školenia a kongresy v oblasti estetickej
                 medicíny,  je držiteľkou mnohých certifikátov v oblasti

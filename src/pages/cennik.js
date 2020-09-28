@@ -12,7 +12,7 @@ const priceData = [
     category: `Vyšetrenia`,
     data:[
       {
-        heading: `Kompletné očne vyšetrenie `,
+        heading: `Kompletné očé vyšetrenie `,
         subheading: `predný segment, zraková ostrosť, vnútroočný tlak, očné pozadie s rozkvapkaním.`,
         price:35
       },
@@ -22,12 +22,12 @@ const priceData = [
         price:20
       },
       {
-        heading: `Vyšetrenie oct`,
+        heading: `Vyšetrenie OCT`,
         subheading: ``,
         price:25
       },
       {
-        heading: `Vyšetrenie oct + očný tlak + perimeter`,
+        heading: `Vyšetrenie OCT + očný tlak + perimeter`,
         subheading: ``,
         price: 45
       },

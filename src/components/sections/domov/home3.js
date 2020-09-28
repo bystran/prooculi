@@ -38,10 +38,11 @@ const Home3 = () => {
             <p>
             Ponúka služby medicínskeho odboru oftalmológia, diagnostiku a liečbu akútnych,
             chronických ochorení oka, vyšetrenie očného pozadia, vyšetrenia zrakovej ostrosti,
-            preventívne prehliadky, drobné chirurgické a estetické zákroky.
+            preventívne prehliadky, drobné chirurgické a estetické zákroky. <br /> <br />
             Profesionálny a ľudský prístup, moderné prístrojové vybavenie v príjemnom prostredí novej
-            očnej ambulancie.
+            očnej ambulancie. Spolupracujeme s Optika Chytil a Centrum mikrochirurgie oka BA.
 
+                
             </p>
             <div className='service-types'>
                 {
