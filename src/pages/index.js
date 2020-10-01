@@ -22,12 +22,23 @@ const IndexPage = () => (
     <Home2 />
     <Home3 />
     <DocSction />
+    <Contact />
+    <div id='kontakt'></div>
+    <div id='ordinacne-hodiny'></div>
+    
     <LazyLoad
       height='1000'
       offset='1000'
       placeholder={<Spinner />} 
     >
       <Contact />
+    </LazyLoad>
+    <div id='mapa'></div>
+    <LazyLoad
+      height='400'
+      offset='500'
+      placeholder={<Spinner />} 
+    >
       <Facebook />
     </LazyLoad>
 

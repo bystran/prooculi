@@ -14,7 +14,6 @@ import '../saas/components/Header.scss';
 
 const Header = ({ siteTitle }, ) => {
     const [ hidden, setHidden ] = useState(true)
-    const [scrollPos, setScrollPos] = useState(0)
     const [classes, setClasses] = useState("at-top")
     const handleClick = (e) => {
         if(e.target.nodeName !== 'NAV'){
@@ -25,16 +24,13 @@ const Header = ({ siteTitle }, ) => {
 
     const handleScroll = () => {
         console.log('scrolling')
-        const pastPos = scrollPos
         const currentPos = window.pageYOffset
         let classString = ''
 
         if(currentPos<10){
             classString = 'at-top'
-            setScrollPos(currentPos)
             setClasses(classString)
         }else if(classes !== ''){
-          setScrollPos(currentPos)
           setClasses(classString)
         }
 

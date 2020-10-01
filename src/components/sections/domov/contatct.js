@@ -69,7 +69,7 @@ const Contact = () => {
     const {file:{img:{fluid}}} = useStaticQuery(query);
     return (
         <div className='contact-section'>
-            <div className='working-hours' id='ordinacne-hodiny'>
+            <div className='working-hours'>
                 <h1>
                     Otváracie hodiny
                 </h1>
@@ -90,7 +90,7 @@ const Contact = () => {
                     }
                 </ul>
             </div>
-            <div className='contact-card'  id='kontakt'>
+            <div className='contact-card' >
                 <h1 className='info'>Kontakt</h1>
                 <div className='info'>
                     <PlaceIcon />
@@ -124,7 +124,7 @@ const Contact = () => {
 
 
             </div>
-            <div className='map-wrapper' id='mapa'>
+            <div className='map-wrapper'>
                     <Map
                         bootstrapURLKeys={
                           {

@@ -28,11 +28,6 @@ const Home2 = () => {
         `linear-gradient(125deg, rgba(0, 180, 216, 0.90) 0%, rgba(0, 180, 216, 0.90) 100%)`,    
         fluid
     ]
-    const style={
-        // Defaults are overwrite-able by setting one or each of the following:
-        backgroundSize: 'cover, auto 100%',
-        backgroundPosition: 'center, right center',
-      }
 
     return (
         <div className='home-2'>
@@ -65,7 +60,7 @@ const Home2 = () => {
               <BackgroundImage fluid={combined_bg}
                 className='bg-box'
               >
-                <h3>Doktorka</h3>
+                <h3>Lekár</h3>
               </BackgroundImage>
             </Link>
             <div 
