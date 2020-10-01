@@ -22,7 +22,6 @@ const IndexPage = () => (
     <Home2 />
     <Home3 />
     <DocSction />
-    <Contact />
     <div id='kontakt'></div>
     <div id='ordinacne-hodiny'></div>
     
