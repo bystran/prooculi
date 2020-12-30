@@ -51,8 +51,8 @@ const workingHours = [
     {
         id: 4,
         label: `Štvrtok`,
-        start: `8:00`,
-        end: `16:00`
+        start: `Neordinujeme`,
+        end: ``
     },
     {
         id: 5,
@@ -61,7 +61,7 @@ const workingHours = [
         end: `14:00`
     }
 ]
-const phone = '0911 938 970'
+const phone = '0910 133 302'
 const email = 'info@prooculi.sk'
 
 const Contact = () => {
@@ -81,7 +81,7 @@ const Contact = () => {
                                     {day.label}
                                 </h3>
                                 <h3 className='opn-hrs'>
-                                    {`${day.start} - ${day.end}`}
+                                    {`${day.start} ${day.end.length>0 ? ' - '+day.end: ''}`}
                                 </h3>
                                 
                             </li>
@@ -97,8 +97,8 @@ const Contact = () => {
                     <address className='company text' >
                         <h3>PROOCULI s.r.o.</h3>
                         <h3>Očná ambulancia</h3>
-                        <p>Zdravotno-relaxačné centrum 2/B</p>
-                        <p>Lipnická 2</p>
+                        <p>Zdravotno-relaxačné centrum 2</p>
+                        <p>Lipnická 2/B</p>
                         <p>90042 Dunajská Lúžna</p>
                     </address>
                 </div>
