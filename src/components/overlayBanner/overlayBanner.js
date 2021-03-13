@@ -32,7 +32,7 @@ const OverlayBanner = (props) => {
                 closeAction={handleOnClick}
                 background={background}
                 primaryText={<h2>OTVÁRAME</h2>}
-                secondaryText={<h1 className="white">V JANUÁRY</h1>}
+                secondaryText={<h1 className="white">V JANUÁRI</h1>}
                 primaryAction={<a className="link-btn" href="#kontakt" onClick={handleOnClick}>Chcem sa objednať</a>}
                 secondaryAction={<div onClick={handleOnClick}>Pokračovať na stránku</div>}
             />

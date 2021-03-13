@@ -12,7 +12,7 @@ const priceData = [
     category: `Vyšetrenia`,
     data:[
       {
-        heading: `Kompletné očé vyšetrenie `,
+        heading: `Kompletné očné vyšetrenie `,
         subheading: `predný segment, zraková ostrosť, vnútroočný tlak, očné pozadie s rozkvapkaním.`,
         price:35
       },
