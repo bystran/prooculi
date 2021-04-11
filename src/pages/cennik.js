@@ -14,7 +14,7 @@ const priceData = [
       {
         heading: `Kompletné očné vyšetrenie `,
         subheading: `predný segment, zraková ostrosť, vnútroočný tlak, očné pozadie s rozkvapkaním.`,
-        price:35
+        price:40
       },
       {
         heading: `Vyšetrenie zrakovej ostrosti a predpis okuliarov `,
@@ -69,7 +69,7 @@ const priceData = [
       {
         heading: `Vyšetrenie spôsobilosti`,
         subheading: `Pre prácu /zobrazovacie jednotky, lasery, vo výškach/, na zbrojný preukaz`,
-        price: 35
+        price: 40
       },
       {
         heading: `Vyšetrenie farbocitu`,

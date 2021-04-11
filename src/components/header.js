@@ -23,7 +23,6 @@ const Header = ({ siteTitle }, ) => {
 
 
     const handleScroll = () => {
-        console.log('scrolling')
         const currentPos = window.pageYOffset
         let classString = ''
 
